@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ワールドエンドガールズ</title>
+  <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Expires" content="0">
+    <link type="text/css" rel="stylesheet" href="css/normalize.css">
+  <link type="text/css" rel="stylesheet" href="css/special.css?update=20180203" />
+  <link rel="SHORTCUT ICON" href="img/WEG.ico">
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
+  <meta name=”robots” content=”noindex”>
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+    /*トグル*/
+  $(function(){
+
+  	$("#menubtn").click(function(){
+  		$("#menu").slideToggle();
+  	});
+
+  });
+/*画面遷移の処理*/
+  $(function() {
+  	//クリックしたときのファンクションをまとめて指定
+  	$('.boxB-3 span').click(function() {
+
+  		//.index()を使いクリックされたタブが何番目かを調べ、
+  		//indexという変数に代入します。
+  		var index = $('.boxB-3 span').index(this);
+
+  		//コンテンツを一度すべて非表示にし、
+  		$('.boxB-2 div').css('display','none');
+
+  		//クリックされたタブと同じ順番のコンテンツを表示します。
+  		$('.boxB-2 div').eq(index).css('display','block');
+
+  		//一度タブについているクラスselectを消し、
+  		$('.boxB-3 span').removeClass('select');
+
+  		//クリックされたタブのみにクラスselectをつけます。
+  		$(this).addClass('select')
+  	});
+  });
+  //画像のみ保存禁止
+  $(function(){
+  $("img").on("contextmenu",function(){
+  return false;
+  });
+});
+
+  </script>
+</head>
+<body onMouseDown="return false;" onSelectStart="return false">
+  <!--[if lt IE 8]>
+          <p>お使いのブラウザは<strong>古い</strong>ため、表示が崩れることがあります。
+          <a href="http://browsehappy.com/">他のブラウザ</a>を利用されるか、<a href="http://www.google.com/chromeframe/?redirect=true">Google Chrome Frame</a>をインストールすることで正しく表示することができます。</p>
+  <![endif]-->
+  <div class="wrapper">
+    <div class="content">
+      <div class="box">
+<header>
+<div class="boxA">
+  <div class="boxA-1">
+    <a href="index.html"><img src="img/Title_rogo.png" alt="" class="logo" width="auto" height="130"></a>
+  </div>
+  <div class="boxA-2">
+
+    <button type="button" id="menubtn">
+    <i class="fa fa-bars"></i><span>MENU</span>
+
+    </button>
+
+    <nav class="menu" id="menu">
+    <ul>
+      <li ontouchstart=""><a href="index.html"><img src="img/bottanA.png" alt="" class="m1"
+        onmouseover="this.src='img/bottanA_.png'" onmouseout="this.src='img/bottanA.png'"><span class="mA">TOP</span></a></li>
+      <li ontouchstart=""><a href="news.html"><img src="img/bottanB.png" alt="" class="m2"
+        onmouseover="this.src='img/bottanB_.png'" onmouseout="this.src='img/bottanB.png'"><span class="mB">NEWS</span></a></li>
+        <li ontouchstart=""><a href="world.html"><img src="img/bottanG.png" alt="" class="m7"
+          onmouseover="this.src='img/bottanG_.png'" onmouseout="this.src='img/bottanG.png'"><span class="mG">WORLD</span></a></li>
+      <li ontouchstart=""><a href="character.html"><img src="img/bottanC.png" alt="" class="m3"
+        onmouseover="this.src='img/bottanC_.png'" onmouseout="this.src='img/bottanC.png'"><span class="mC">CHARACTER</span></a></li>
+      <li ontouchstart=""><a href="system.html"><img src="img/bottanD.png" alt="" class="m4"
+        onmouseover="this.src='img/bottanD_.png'" onmouseout="this.src='img/bottanD.png'"><span class="mD">SYSTEM</span></a></li>
+      <li ontouchstart=""><a href="#"><img src="img/bottanE_.png" alt="" class="m5">
+        <span class="mE">SPECIAL</span></a></li>
+      <li ontouchstart=""><a href="faq.html"><img src="img/bottanF.png" alt="" class="m6"
+        onmouseover="this.src='img/bottanF_.png'" onmouseout="this.src='img/bottanF.png'"><span class="mF">FAQ</span></a></li>
+
+<!--
+      <li><div class="mv1">
+        <iframe
+        src="https://www.youtube.com/embed/xvHPAVapnuY?rel=0&iv_load_policy=3&showinfo=0&controls=0&modestbranding=1"
+        frameborder="0" allowfullscreen>
+        </iframe>
+      </div></li>
+    -->
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</header><!--
+<span><img class="cathi" src="img/catch.png" alt="" class="myimg1" width="80%" height=""></span>
+<span><img class="cathi2" src="img/catch.png" alt="" class="myimg1" width="80%" height=""></span>-->
+
+
+<div class="boxB">
+
+  <div class="boxB-1">
+  	<img src="img/special.png" alt="" class="Cbottan" width="" height="">
+  </div>
+
+  <div class="boxB-2">
+    <!--最初の表示のみ-->
+    <div class="">
+
+
+
+    </div>
+    <!--最初の表示終わり-->
+      <!--1-->
+    <div class="hide">
+
+
+
+    </div>
+
+  </div>
+<!--
+  <div class="boxB-3">
+    <span class="select"><img src="img/left.png" alt="" class="C" width="4%" height="4%"></span>
+
+    <span><img src="img/center.png" alt="" class="Cbottan" width="4%" height="4%"></span>
+
+    <span><img src="img/right.png" alt="" class="C" width="4%" height="4%"></span>
+    -->
+  </div>
+</div>
+
+
+
+
+<div class="download-button">
+  <!--
+  <div class="ap"><a class="apple" target="_blank" href="javascript:void(0)">
+    <img src="img/apple.png" alt="" class="apimg" width="" height=""></a></div>
+  <div class="go"><a class="google" target="_blank" href="javascript:void(0)">
+  <img src="img/google.png" alt="" class="goimg" width="" height=""></a></div>
+-->
+</div>
+
+<!--
+<div class="mv2">
+  <iframe
+  src="https://www.youtube.com/embed/xvHPAVapnuY?rel=0&iv_load_policy=3&showinfo=0&controls=0&modestbranding=1"
+  frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+-->
+
+<div class="contmoji">
+  <span><img src="img/news2.png" alt="" class="C"></span>
+</div>
+
+<div class="HQ">
+
+    <div class="Os">
+      <div class="Os2">
+
+        <p class="no1"><a href="#">お知らせ１</a></p>
+        <hr>
+        <p class="no1"><a href="#">お知らせ２</a></p>
+        <hr>
+        <p class="no1"><a href="#">お知らせ３</a></p>
+        <hr>
+        <p class="no1"><a href="#">お知らせ４</a></p>
+        <hr>
+
+        <p class="no1 no2"><a href="news.html">more ▶▶▶</a></p>
+
+
+      </div>
+    </div>
+
+    <div class="contmoji2">
+      <span><img src="img/twitter.png" alt="" class="C"></span>
+    </div>
+
+  <div class="Tw">
+    <div class="Tw2">
+      <a class="twitter-timeline" href="https://twitter.com/RoktGames?ref_src=twsrc%5Etfw">
+      Tweets by RoktGames</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+</div><!--widthのdiv-->
+</div><!--contentのdiv-->
+
+
+</div><!--wrapperのdiv-->
+<div class="footer">
+  <div class="link">
+    <p>
+    <a href="#">利用規約</a>
+    <span>　/　</span>
+    <a href="#">プライバシーポリシー</a>
+    <span>　/　</span>
+    <a href="#">資金決済法に基づく表示</a>
+    <span>　/　</span>
+    <a href="#">特定商取引法に基づく表示</a>
+  </p>
+  </div>
+  <div class="copyright">
+  <p>© 2018 world End Girls  All Rights Reserved.</p>
+  </div>
+</div>
+</body>
+</html>

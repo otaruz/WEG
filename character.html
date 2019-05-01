@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ワールドエンドガールズ</title>
+  <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Expires" content="0">
+    <link type="text/css" rel="stylesheet" href="css/normalize.css">
+  <link type="text/css" rel="stylesheet" href="css/character.css?update=20180203" />
+  <link rel="SHORTCUT ICON" href="img/WEG.ico">
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
+  <meta name=”robots” content=”noindex”>
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+    /*トグル*/
+  $(function(){
+
+  	$("#menubtn").click(function(){
+  		$("#menu").slideToggle();
+  	});
+
+  });
+
+  $(function() {
+  	//クリックしたときのファンクションをまとめて指定
+  	$('.boxB-1 span').click(function() {
+
+  		//.index()を使いクリックされたタブが何番目かを調べ、
+  		//indexという変数に代入します。
+  		var index = $('.boxB-1 span').index(this);
+
+  		//コンテンツを一度すべて非表示にし、
+  		$('.boxB-2 div').css('display','none').fadeOut("slow");
+
+  		//クリックされたタブと同じ順番のコンテンツを表示します。
+  		$('.boxB-2 div').eq(index).fadeIn("slow");
+
+  		//一度タブについているクラスselectを消し、
+  		$('.boxB-1 span').removeClass('select');
+
+  		//クリックされたタブのみにクラスselectをつけます。
+  		$(this).addClass('select')
+  	});
+  });
+  //画像のみ保存禁止
+  $(function(){
+  $("img").on("contextmenu",function(){
+  return false;
+  });
+});
+
+  </script>
+</head>
+<body onMouseDown="return false;" onSelectStart="return false">
+  <!--[if lt IE 8]>
+          <p>お使いのブラウザは<strong>古い</strong>ため、表示が崩れることがあります。
+          <a href="http://browsehappy.com/">他のブラウザ</a>を利用されるか、<a href="http://www.google.com/chromeframe/?redirect=true">Google Chrome Frame</a>をインストールすることで正しく表示することができます。</p>
+  <![endif]-->
+  <div class="wrapper">
+    <div class="content">
+      <div class="box">
+<header>
+<div class="boxA">
+  <div class="boxA-1">
+    <a href="index.html"><img src="img/Title_rogo.png" alt="" class="logo" width="auto" height="130"></a>
+  </div>
+  <div class="boxA-2">
+
+    <button type="button" id="menubtn">
+    <i class="fa fa-bars"></i><span>MENU</span>
+
+    </button>
+
+    <nav class="menu" id="menu">
+    <ul>
+      <li ontouchstart=""><a href="index.html"><img src="img/bottanA.png" alt="" class="m1"
+        onmouseover="this.src='img/bottanA_.png'" onmouseout="this.src='img/bottanA.png'"><span class="mA">TOP</span></a></li>
+      <li ontouchstart=""><a href="news.html"><img src="img/bottanB.png" alt="" class="m2"
+        onmouseover="this.src='img/bottanB_.png'" onmouseout="this.src='img/bottanB.png'"><span class="mB">NEWS</span></a></li>
+        <li ontouchstart=""><a href="world.html"><img src="img/bottanG.png" alt="" class="m7"
+          onmouseover="this.src='img/bottanG_.png'" onmouseout="this.src='img/bottanG.png'"><span class="mG">WORLD</span></a></li>
+      <li ontouchstart=""><a href="#"><img src="img/bottanC_.png" alt="" class="m3">
+        <span class="mC">CHARACTER</span></a></li>
+      <li ontouchstart=""><a href="system.html"><img src="img/bottanD.png" alt="" class="m4"
+        onmouseover="this.src='img/bottanD_.png'" onmouseout="this.src='img/bottanD.png'"><span class="mD">SYSTEM</span></a></li>
+      <li ontouchstart=""><a href="special.html"><img src="img/bottanE.png" alt="" class="m5"
+        onmouseover="this.src='img/bottanE_.png'" onmouseout="this.src='img/bottanE.png'"><span class="mE">SPECIAL</span></a></li>
+      <li ontouchstart=""><a href="faq.html"><img src="img/bottanF.png" alt="" class="m6"
+        onmouseover="this.src='img/bottanF_.png'" onmouseout="this.src='img/bottanF.png'"><span class="mF">FAQ</span></a></li>
+<!--
+      <li><div class="mv1">
+        <iframe
+        src="https://www.youtube.com/embed/xvHPAVapnuY?rel=0&iv_load_policy=3&showinfo=0&controls=0&modestbranding=1"
+        frameborder="0" allowfullscreen>
+        </iframe>
+      </div></li>
+    -->
+    </ul>
+  </nav>
+
+  </div>
+</div>
+</header><!--
+<span><img class="cathi" src="img/catch.png" alt="" class="myimg1" width="80%" height=""></span>
+<span><img class="cathi2" src="img/catch.png" alt="" class="myimg1" width="80%" height=""></span>-->
+
+
+<div class="boxB">
+
+  <div class="boxB-0">
+  	<img src="img/character.png" alt="" class="Cbottan" width="" height="">
+  </div>
+
+  <div class="boxB-1">
+  	<span class="select"><img src="img/aset/Face Icon_02.png" alt="" class="C" width="45" height="45"></span>
+  	<span><img src="img/aset/Face Icon_03.png" alt="" class="C" width="45" height="45"></span>
+  	<span><img src="img/aset/Face Icon_04.png" alt="" class="C" width="45" height="45"></span>
+  	<span><img src="img/aset/Face Icon_01.png" alt="" class="C" width="45" height="45"></span>
+    <span><img src="img/aset/Face Icon_01.png" alt="" class="C" width="45" height="45"></span>
+    <span><img src="img/aset/Face Icon_01.png" alt="" class="C" width="45" height="45"></span>
+    <span><img src="img/aset/Face Icon_01.png" alt="" class="C" width="45" height="45"></span>
+    <span><img src="img/aset/Face Icon_01.png" alt="" class="C" width="45" height="45"></span>
+    <span><img src="img/aset/Face Icon_01.png" alt="" class="C" width="45" height="45"></span>
+    <span><img src="img/aset/Face Icon_01.png" alt="" class="C" width="45" height="45"></span>
+    <!--10-->
+    <span><img src="img/aset/Face Icon_01.png" alt="" class="C" width="45" height="45"></span>
+    <span><img src="img/aset/Face Icon_01.png" alt="" class="C" width="45" height="45"></span>
+    <span><img src="img/aset/Face Icon_01.png" alt="" class="C" width="45" height="45"></span>
+    <span><img src="img/aset/Face Icon_01.png" alt="" class="C" width="45" height="45"></span>
+    <span><img src="img/aset/Face Icon_01.png" alt="" class="C" width="45" height="45"></span>
+    <span><img src="img/aset/Face Icon_01.png" alt="" class="C" width="45" height="45"></span>
+    <span><img src="img/aset/Face Icon_01.png" alt="" class="C" width="45" height="45"></span>
+    <span><img src="img/aset/Face Icon_01.png" alt="" class="C" width="45" height="45"></span>
+    <span><img src="img/aset/Face Icon_01.png" alt="" class="C" width="45" height="45"></span>
+    <span><img src="img/aset/Face Icon_01.png" alt="" class="C" width="45" height="45"></span>
+    <!--20-->
+    <span><img src="img/aset/Face Icon_01.png" alt="" class="C" width="45" height="45"></span>
+    <span><img src="img/aset/Face Icon_01.png" alt="" class="C" width="45" height="45"></span>
+    <span><img src="img/aset/Face Icon_01.png" alt="" class="C" width="45" height="45"></span>
+    <span><img src="img/aset/Face Icon_01.png" alt="" class="C" width="45" height="45"></span>
+    <span><img src="img/aset/Face Icon_01.png" alt="" class="C" width="45" height="45"></span>
+    <span><img src="img/aset/Face Icon_01.png" alt="" class="C" width="45" height="45"></span>
+    <span><img src="img/aset/Face Icon_01.png" alt="" class="C" width="45" height="45"></span>
+    <span><img src="img/aset/Face Icon_01.png" alt="" class="C" width="45" height="45"></span>
+    <span><img src="img/aset/Face Icon_01.png" alt="" class="C" width="45" height="45"></span>
+    <span><img src="img/aset/Face Icon_01.png" alt="" class="C" width="45" height="45"></span>
+    <!--30-->
+    <span><img src="img/aset/Face Icon_01.png" alt="" class="C" width="45" height="45"></span>
+    <span><img src="img/aset/Face Icon_01.png" alt="" class="C" width="45" height="45"></span>
+    <span><img src="img/aset/Face Icon_01.png" alt="" class="C" width="45" height="45"></span>
+    <span><img src="img/aset/Face Icon_01.png" alt="" class="C" width="45" height="45"></span>
+    <!--33-->
+  </div>
+
+  <div class="boxB-2">
+    <!--最初の表示0-->
+    <!--0-->
+    <!--鴻上キャラクターのみ2-1-1と2-2-2というクラスにしている-->
+    <div class="">
+            <span class="boxB-2-1">
+              <span class="boxB-2-A"><img src="img/chara_midasi/chara_replay.png" alt="" class="" width="100%" height="auto"></span>
+              <span class="boxB-2-B"><p>記憶を持ち越したまま世界を3日間巻き戻すことができるリプレイのサイキック</p></span>
+              <span class="boxB-2-C"><h1>鴻上輪子<small>(こうがみ りんこ)</small></h1><hr></span>
+              <span class="boxB-2-D"><p>
+                記憶を持ち越したまま世界を三日分巻き戻すことができる<br>『リプレイ』のサイキック能力者。<br>
+                サイキック能力は原則として一人につきひとつだが、<br>
+                彼女は「リプレイ」の他にも様々なサイキックを使用することができる。<br>
+                世界の終わりを阻止するために何度も終末の3日間を体験している。<br>
+                何度目かのループまではそのことを仲間に伝えるよう努力していたが、<br>
+                何度やっても信じてもらえないため、<br>
+                今では諦めと達観に近い感情で孤独に終末を戦っている。<br><br>
+                <strong>制約は不明。</strong>
+              </p>
+              </span>
+            </span>
+            <span class="boxB-2-2-2">
+
+              <span class="boxB-2-E">
+
+
+              <img src="img/character/standChar_00.png" alt="" class="K" width="100%" height="auto">
+
+
+              </span>
+
+          </span>
+            <span class="boxB-2-F"><h1>鴻上輪子<small>(こうがみ りんこ)</small><h1></span>
+            <span class="boxB-2-G"><p>
+              記憶を持ち越したまま世界を三日分巻き戻すことができる<br>『リプレイ』のサイキック能力者。<br>
+              サイキック能力は原則として一人につきひとつだが、<br>
+              彼女は「リプレイ」の他にも様々なサイキックを使用することができる。<br>
+              世界の終わりを阻止するために何度も終末の3日間を体験している。<br>
+              何度目かのループまではそのことを仲間に伝えるよう努力していたが、<br>
+              何度やっても信じてもらえないため、<br>
+              今では諦めと達観に近い感情で孤独に終末を戦っている。<br><br>
+              <strong>制約は不明。</strong>
+            </p>
+            </span>
+    </div>
+    <!--最初の表示終わり-->
+    <!--1-->
+
+    <div class="hide">
+            <span class="boxB-2-1">
+              <span class="boxB-2-A"><img src="img/chara_midasi/chara_pyro.png" alt="" class="" width="100%" height="auto"></span>
+              <span class="boxB-2-B"><p>圧倒的な破壊の力である炎を操るパイロキネシスのサイキック</p></span>
+              <span class="boxB-2-C"><h1>火野村彩加<small>(ひのむら あやか)</small></h1><hr></span>
+              <span class="boxB-2-D"><p>
+                「火」という圧倒的な破壊の力を操るためか、多少病んでる。<br>
+                  大火災で家族を失い、自分だけが生き残ったことでサイキック能力に目覚めた。<br>
+                  それ以来、赤く燃えさかる炎を見るたびに身体の震えが止まらなくなった。<br>
+                  燃やしたものの煙を吸い込まないようにするためガスマスクを常備している。<br><br>
+
+                  <strong>制約は『幸福感』。</strong><br><br>
+                  家族を奪った火を見ることでしか幸福感を感じられない。</p>
+        </span>
+            </span>
+            <span class="boxB-2-2">
+              <span class="boxB-2-E">
+              <img src="img/character/standChar_01.png" alt="" class="" width="100%" height="auto">
+              </span>
+            </span>
+            <span class="boxB-2-F"><h1>火野村彩加<small>(ひのむら あやか)</small><h1></span>
+            <span class="boxB-2-G"><p>
+            「火」という圧倒的な破壊の力を操るためか、多少病んでる。<br>
+            大火災で家族を失い、自分だけが生き残ったことでサイキック能力に目覚めた。<br>
+            それ以来、赤く燃えさかる炎を見るたびに身体の震えが止まらなくなった。<br>
+            燃やしたものの煙を吸い込まないようにするためガスマスクを常備している。<br><br>
+
+            <strong>制約は『幸福感』。</strong><br><br>
+            家族を奪った火を見ることでしか幸福感を感じられない。</p>
+            </span>
+    </div>
+    <!--2-->
+  	<div class="hide">
+      <span class="boxB-2-1">
+        <span class="boxB-2-A"><img src="img/chara_midasi/chara_shinobi.png" alt="" class="" width="100%" height="auto"></span>
+        <span class="boxB-2-B"><p>隠密と暗殺の技を融合させた体術で、神出鬼没に戦うシノビのサイキック</p></span>
+        <span class="boxB-2-C"><h1>忍足鈴紗<small>(おしだり すずな)</small></h1><hr></span>
+        <span class="boxB-2-D"><p>代々続く忍者の末裔であり、物心ついたときより「くのいち」として育てられた。<br>
+        周りからは無口で沈着冷静、ステレオタイプの冷酷なシノビだと思われているが、<br>
+        能力向上の制約で『声』を失っているだけで、<br>実はお調子者でおしゃべり好きな明るい女の子である。<br><br>
+        <strong>制約は『声』。</strong><br><br>
+        会話の自由を失うことで飛躍的に身体能力がした。<br>
+        日頃からおしゃべりでストレス解消をしていたがそれは叶わないため、<br>
+        今はお笑い番組を見ることだけが心の癒やしとなっている。
+      </p></span>
+    </span>
+      <span class="boxB-2-2">
+        <span class="boxB-2-E">
+        <img src="img/character/standChar_02.png" alt="" class="" width="100%" height="auto">
+        </span>
+      </span>
+      <span class="boxB-2-F"><h1>忍足鈴紗<small>(おしだり すずな)</small><h1></span>
+      <span class="boxB-2-G"><p>代々続く忍者の末裔であり、物心ついたときより「くのいち」として育てられた。<br>
+      周りからは無口で沈着冷静、ステレオタイプの冷酷なシノビだと思われているが、<br>
+      能力向上の制約で『声』を失っているだけで、実はお調子者でおしゃべり好きな明るい女の子である。<br><br>
+      <strong>制約は『声』。 </strong><br><br>
+      会話の自由を失うことで飛躍的に身体能力がした。<br>
+      日頃からおしゃべりでストレス解消をしていたがそれは叶わないため、<br>
+      今はお笑い番組を見ることだけが心の癒やしとなっている。</p>
+      </span>
+    </div>
+    <!--3-->
+    <div class="hide">
+      <span class="boxB-2-1">
+        <span class="boxB-2-A"><img src="img/chara_midasi/chara_defender.png" alt="" class="" width="100%" height="auto"></span>
+        <span class="boxB-2-B"><p>空気中の分子を結合させ強力な防御壁を生み出すディフェンダーのサイキック</p></span>
+        <span class="boxB-2-C"><h1>アビゲイル・エヴァンス</h1><hr></span>
+        <span class="boxB-2-D"><p>見習い修道女であったある日、修道院がマガツに襲撃され同僚たちを全員失う。<br>
+        仲間と一緒に武器をとって戦いたかったが、<br>恐怖で武器を手に持つことさえできなかったトラウマから、<br>
+        ディフェンダーのサイキックに目覚める。<br>それ以来、能力を役立てること望みWEGに入隊する。<br><br>
+
+        <strong>制約は『両手首の欠損』。</strong><br><br>
+        武器を持つことは諦め、味方を守る力を特化させた。<br>
+        能力の向上のため以外にも自戒の意味が込められており、<br>
+        日常生活でも生体デバイスや義手を使わずに過ごしている。</p></span>
+      </span>
+      <span class="boxB-2-2">
+        <span class="boxB-2-E">
+        <img src="img/character/standChar_03.png" alt="" class="" width="100%" height="auto">
+        </span>
+      </span>
+      <span class="boxB-2-F"><h1>アビゲイル・エヴァンス<h1></span>
+      <span class="boxB-2-G"><p>見習い修道女であったある日、修道院がマガツに襲撃され同僚たちを全員失う。<br>
+      仲間と一緒に武器をとって戦いたかったが、恐怖で武器を手に持つことさえできなかったトラウマから、<br>
+      ディフェンダーのサイキックに目覚める。それ以来、能力を役立てること望みWEGに入隊する。<br><br>
+
+      <strong>制約は『両手首の欠損』。</strong><br><br>
+      武器を持つことは諦め、味方を守る力を特化させた。<br>
+      能力の向上のため以外にも自戒の意味が込められており、<br>
+      日常生活でも生体デバイスや義手を使わずに過ごしている。</p></span>
+    </div>
+    <!--4-->
+    <div class="hide">
+      <span class="boxB-2-1">
+        <span class="boxB-2-A"><img src="img/chara_midasi/chara_earth.png" alt="" class="" width="100%" height="auto"></span>
+        <span class="boxB-2-B"><p>岩や砂、鉱物を自在に操り桁外れの圧力をかけるアースキネシスのサイキック</p></span>
+        <span class="boxB-2-C"><h1>石神ダイア<small>(いしがみ だいあ)</small></h1><hr></span>
+        <span class="boxB-2-D"><p>容姿も、中身も小学生にしか見えないがれっきとした成人女性。<br>
+        見た目年齢の頃にサイキック能力に目覚めるが、<br>両親からはその力を怖がられ距離を置かれてしまう。<br>
+        そのことは心に深い傷を残し、<br>それが原因で彼女は身体と精神の成長を止めてしまった。<br>
+        因果にもそのことが、彼女の力をさらに強くさせた。<br><br>
+        <strong>制約は『成長』。</strong><br><br>
+        身体も精神（こころ）も成長が止まっている。</p></span>
+      </span>
+      <span class="boxB-2-2">
+        <span class="boxB-2-E">
+        <img src="img/character/standChar_04.png" alt="" class="" width="100%" height="auto">
+        </span>
+      </span>
+      <span class="boxB-2-F"><h1>石神ダイア<small>(いしがみ だいあ)</small><h1></span>
+      <span class="boxB-2-G"><p>容姿も、中身も小学生にしか見えないがれっきとした成人女性。<br>
+      見た目年齢の頃にサイキック能力に目覚めるが、<br>両親からはその力を怖がられ距離を置かれてしまう。<br>
+      そのことは心に深い傷を残し、それが原因で彼女は身体と精神の成長を止めてしまった。<br>
+      因果にもそのことが、彼女の力をさらに強くさせた。<br><br>
+      <strong>制約は『成長』。</strong><br><br>
+      身体も精神（こころ）も成長が止まっている。</p></span>
+    </div>
+    <!--5-->
+    <div class="hide">
+      <span class="boxB-2-1">
+        <span class="boxB-2-A"><img src="img/chara_midasi/chara_gardener.png" alt="" class="" width="100%" height="auto"></span>
+        <span class="boxB-2-B"><p>樹木や葉、花など植物を自由に操る、癒やしと力を兼ね備えたガーデナーのサイキック</p></span>
+        <span class="boxB-2-C"><h1>オリヴィア・サマラス</h1><hr></span>
+        <span class="boxB-2-D"><p>ガーデニングが趣味の、母性的で面倒見が良いおっとりとした性格の女の子。<br>
+        二面性があり切れると怖いタイプで、背が高く、巨乳でスタイルがいい少女だが、<br>
+        本人は大柄なことをコンプレックスに思っており、そのことを話すとすぐに怒り出す。<br><br>
+        <strong>制約は『生理機能』。</strong><br><br>
+        菜食主義者（ヴィーガン）だったが、能力向上の制約として、<br>動物性タンパク質からでしか栄養が摂取できなくなった。<br>
+        そのため、大嫌いな肉を吐きそうになりながらも食べている。
+      </p></span>
+      </span>
+      <span class="boxB-2-2">
+        <span class="boxB-2-E">
+        <img src="img/character/standChar_05.png" alt="" class="" width="100%" height="auto">
+        </span>
+      </span>
+      <span class="boxB-2-F"><h1>オリヴィア・サマラス</h1></span>
+      <span class="boxB-2-G"><p>ガーデニングが趣味の、母性的で面倒見が良いおっとりとした性格の女の子。<br>
+      二面性があり切れると怖いタイプで、背が高く、巨乳でスタイルがいい少女だが、<br>
+      本人は大柄なことをコンプレックスに思っており、そのことを話すとすぐに怒り出す。<br><br>
+      <strong>制約は『生理機能』。</strong><br><br>
+      菜食主義者（ヴィーガン）だったが、能力向上の制約として、<br>動物性タンパク質からでしか栄養が摂取できなくなった。<br>
+      そのため、大嫌いな肉を吐きそうになりながらも食べている。
+    </p>
+      </span>
+    </div>
+    <!--6-->
+    <div class="hide">
+      <span class="boxB-2-1">
+        <span class="boxB-2-A"><img src="img/chara_midasi/chara_aero.png" alt="" class="" width="100%" height="auto"></span>
+        <span class="boxB-2-B"><p>刃のような突風で攻撃し、<br>ときには防壁のような豪風で敵の動きを封じるエアロキネシスのサイキック</p></span>
+        <span class="boxB-2-C"><h1>万木風香<small>(ゆるぎ ふうか)</small></h1><hr></span>
+        <span class="boxB-2-D"><p>空や雲、虹などを描くのが好きなアーティスト志望の娘。<br>
+        裏表のない性格で、アートを志す割に物事に執着がない。<br>
+        学生ながらも作品は世界的に評価されており、その将来性が注目されていた。<br><br>
+        <strong>制約は『色彩』。</strong><br><br>
+        サイキック能力向上の代償として色彩機能を失う。いわゆる全色盲。<br>
+        本人は悲観すること亡く、色が見えないなら漫画でも描こうと思っている。
+      </p></span>
+      </span>
+      <span class="boxB-2-2">
+        <span class="boxB-2-E">
+        <img src="img/character/standChar_06.png" alt="" class="" width="100%" height="auto">
+        </span>
+      </span>
+      <span class="boxB-2-F"><h1>万木風香<small>(ゆるぎ ふうか)</small></h1></span>
+      <span class="boxB-2-G"><p>空や雲、虹などを描くのが好きなアーティスト志望の娘。<br>
+      裏表のない性格で、アートを志す割に物事に執着がない。<br>
+      学生ながらも作品は世界的に評価されており、その将来性が注目されていた。<br><br>
+      <strong>制約は『色彩』。</strong><br><br>
+      サイキック能力向上の代償として色彩機能を失う。いわゆる全色盲。<br>
+      本人は悲観すること亡く、色が見えないなら漫画でも描こうと思っている。
+    </p>
+      </span>
+    </div>
+    <!--7-->
+    <div class="hide">
+      <span class="boxB-2-1">
+        <span class="boxB-2-A"><img src="img/chara_midasi/chara_number.png" alt="" class="" width="100%" height="auto"></span>
+        <span class="boxB-2-B"><p>どんな事象も数字と数式で解析することができるナンバーのサイキック</p></span>
+        <span class="boxB-2-C"><h1>アストリッド・パーカー</h1><hr></span>
+        <span class="boxB-2-D"><p>天才的な頭脳を持ち14歳で数学・工学・科学の博士号を取得した。<br>
+        口が悪く自己中心的な性格で、<br>相手の欠点を看破しては容赦なく指摘して楽しむ癖がある。<br>
+        自身が開発した兵器を遠隔操作して戦う。<br>データ分析により人類がマガツに勝てないことにうすうす気がついている。<br><br>
+        <strong>制約は『代謝異常』。</strong><br><br>
+        常時、高カロリーを摂取をしないと生命維持ができない。
+      </p></span>
+      </span>
+      <span class="boxB-2-2">
+        <span class="boxB-2-E">
+        <img src="img/character/standChar_07.png" alt="" class="" width="100%" height="auto">
+        </span>
+      </span>
+      <span class="boxB-2-F"><h1>アストリッド・パーカー<h1></span>
+      <span class="boxB-2-G"><p>天才的な頭脳を持ち14歳で数学・工学・科学の博士号を取得した。<br>
+      口が悪く自己中心的な性格で、相手の欠点を看破しては容赦なく指摘して楽しむ癖がある。<br>
+      自身が開発した兵器を遠隔操作して戦う。データ分析により人類がマガツに勝てないことにうすうす気がついている。<br><br>
+      <strong>制約は『代謝異常』。</strong><br><br>
+      常時、高カロリーを摂取をしないと生命維持ができない。
+    </p>
+      </span>
+    </div>
+    <!--8-->
+    <div class="hide">
+      <span class="boxB-2-1">
+        <span class="boxB-2-A"><img src="img/chara_midasi/chara_aqua.png" alt="" class="" width="100%" height="auto"></span>
+        <span class="boxB-2-B"><p>生命の源であると同時に大いなる破壊の力である水を自由に操るアクアキネシスのサイキック</p></span>
+        <span class="boxB-2-C"><h1>髙津水希<small>(たかつ みずき)</small></h1><hr></span>
+        <span class="boxB-2-D"><p>他人を思いやれる優しい性格だが、引っ込み思案で根暗。<br>
+        父親が無理心中をはかり湖に車ごと突っ込むが、<br>その際にサイキック能力に目覚め自分だけが助かる。<br>
+        その後、何度も自殺を図るが生存本能とサイキック能力のため毎度未遂に終わる。<br>長袖でリストカットの跡を隠している。<br><br>
+        <strong>制約は『渇き』。</strong><br><br>
+        水がどれほどあろうと、彼女の身体は渇きを潤すことができない。
+      </p></span>
+      </span>
+      <span class="boxB-2-2">
+        <span class="boxB-2-E">
+        <img src="img/character/standChar_08.png" alt="" class="" width="100%" height="auto">
+        </span>
+      </span>
+      <span class="boxB-2-F"><h1>髙津水希<small>(たかつ みずき)</small></h1></span>
+      <span class="boxB-2-G"><p>他人を思いやれる優しい性格だが、引っ込み思案で根暗。<br>
+      父親が無理心中をはかり湖に車ごと突っ込むが、その際にサイキック能力に目覚め自分だけが助かる。<br>
+      その後、何度も自殺を図るが生存本能とサイキック能力のため毎度未遂に終わる。<br>長袖でリストカットの跡を隠している。<br><br>
+      <strong>制約は『渇き』。</strong><br><br>
+      水がどれほどあろうと、彼女の身体は渇きを潤すことができない。
+    </p>
+      </span>
+    </div>
+    <!--9-->
+    <div class="hide">
+      <span class="boxB-2-1">
+        <span class="boxB-2-A"><img src="img/chara_midasi/chara_telepath.png" alt="" class="" width="100%" height="auto"></span>
+        <span class="boxB-2-B"><p>他者の精神に接触し考えを読み取ったり、<br>言葉を発さずに相手に物事を伝えることができるテレパスのサイキック</p></span>
+        <span class="boxB-2-C"><h1>アナスタシア・トルスタヤ</h1><hr></span>
+        <span class="boxB-2-D"><p>幼い頃に両親をマガツの襲撃で失ったため、孤児院で育つ。<br>
+        幼少期より相手の思考を読み取るテレパスのサイキックが発動していたため、<br>
+        言葉によるコミュニケーションが苦手。<br>ロシアからWEGに戦力増員として派遣されてきたが実はマガツとの大戦後、<br>
+        ロシアが世界の覇権を握るために送り込まれた工作員。<br>
+        鴻上輪子の思考を読んだため、ループしている終末の3日間を知ることになる。<br><br>
+        <strong>制約は『生殖機能』。</strong><br><br>
+        セックスはできるが生殖機能がないため、自分の家族を作ることはできない。
+      </p></span>
+      </span>
+      <span class="boxB-2-2">
+        <span class="boxB-2-E">
+        <img src="img/character/standChar_09.png" alt="" class="" width="100%" height="auto">
+        </span>
+      </span>
+      <span class="boxB-2-F"><h1>アナスタシア・トルスタヤ<h1></span>
+      <span class="boxB-2-G"><p>幼い頃に両親をマガツの襲撃で失ったため、孤児院で育つ。<br>
+      幼少期より相手の思考を読み取るテレパスのサイキックが発動していたため、<br>
+      言葉によるコミュニケーションが苦手。<br>ロシアからWEGに戦力増員として派遣されてきたが実はマガツとの大戦後、<br>
+      ロシアが世界の覇権を握るために送り込まれた工作員。<br>
+      鴻上輪子の思考を読んだため、ループしている終末の3日間を知ることになる。<br><br>
+      <strong>制約は『生殖機能』。</strong><br><br>
+      セックスはできるが生殖機能がないため、自分の家族を作ることはできない。
+    </p>
+      </span>
+    </div>
+    <!--10-->
+    <div class="hide">
+      <span class="boxB-2-1">
+        <span class="boxB-2-A"><img src="img/chara_midasi/chara_driver.png" alt="" class="" width="100%" height="auto"></span>
+        <span class="boxB-2-B"><p>エンジンのついた乗り物であれば構造を瞬時に理解し、<br>完璧に乗りこなしてしまうドライバーのサイキック</p></span>
+        <span class="boxB-2-C"><h1>八重島操<small>(やえしま みさお)</small></h1><hr></span>
+        <span class="boxB-2-D"><p>メカニックオタクでガソリンの匂いと、ブラックコーヒーが大好きな女子。<br>
+        運転中はしっかりしているが、乗り物に乗っていないときはズボラでだらしがない。<br>
+        バイク型兵器はアストリッドが開発したもの。<br><br>
+        <strong>制約は『嗅覚』。</strong><br><br>
+        何を嗅いでも無臭。そのためガソリンの匂いも嗅げないし、<br>好きなコーヒーがただの苦い汁になってしまった。
+      </p></span>
+      </span>
+      <span class="boxB-2-2">
+        <span class="boxB-2-E">
+        <img src="img/character/standChar_10.png" alt="" class="" width="100%" height="auto">
+        </span>
+      </span>
+      <span class="boxB-2-F"><h1>八重島操<small>(やえしま みさお)</small></h1></span>
+      <span class="boxB-2-G"><p>メカニックオタクでガソリンの匂いと、ブラックコーヒーが大好きな女子。<br>
+      運転中はしっかりしているが、乗り物に乗っていないときはズボラでだらしがない。<br>
+      バイク型兵器はアストリッドが開発したもの。<br><br>
+      <strong>制約は『嗅覚』。</strong><br><br>
+      何を嗅いでも無臭。そのためガソリンの匂いも嗅げないし、<br>好きなコーヒーがただの苦い汁になってしまった。
+    </p>
+      </span>
+    </div>
+    <!--11-->
+    <div class="hide">
+      <span class="boxB-2-1">
+        <span class="boxB-2-A"><img src="img/chara_midasi/chara_healing.png" alt="" class="" width="100%" height="auto"></span>
+        <span class="boxB-2-B"><p>対象の自己治癒能力に働きかけて活性化し、傷を癒すヒーリングのサイキック</p></span>
+        <span class="boxB-2-C"><h1>市ノ瀬いやし<small>(いちのせ いやし)</small></h1><hr></span>
+        <span class="boxB-2-D"><p>相手のために尽くすことに喜びを感じる、優しさと思いやりに溢れる性格。<br>
+        日本におけるマガツの被害が後を絶たなかった時期、<br>見習いナースとして傷ついた人々の治療に当たっていた。。<br>
+        目の前で失われていく多くの命を目の当たりにして、<br>絶望感と無力感に打ちひしがれていたときヒーリングの能力に目覚める。<br>
+        少しぽっちゃり体型なことを気にしているが、どうしてもお菓子がやめられない。<br><br>
+        <strong>制約は『満腹感』。</strong><br><br>
+        いくら食べても満たされることはない。
+      </p></span>
+      </span>
+      <span class="boxB-2-2">
+        <span class="boxB-2-E">
+        <img src="img/character/standChar_11.png" alt="" class="" width="100%" height="auto">
+        </span>
+      </span>
+      <span class="boxB-2-F"><h1>市ノ瀬いやし<small>(いちのせ いやし)</small></h1></span>
+      <span class="boxB-2-G"><p>相手のために尽くすことに喜びを感じる、優しさと思いやりに溢れる性格。<br>
+      日本におけるマガツの被害が後を絶たなかった時期、見習いナースとして傷ついた人々の治療に当たっていた。。<br>
+      目の前で失われていく多くの命を目の当たりにして、絶望感と無力感に打ちひしがれていたときヒーリングの能力に目覚める。<br>
+      少しぽっちゃり体型なことを気にしているが、どうしてもお菓子がやめられない。<br><br>
+      <strong>制約は『満腹感』。</strong><br><br>
+      いくら食べても満たされることはない。
+    </p>
+      </span>
+    </div>
+    <!--12-->
+    <div class="hide">
+      <span class="boxB-2-1">
+        <span class="boxB-2-A"><img src="img/chara_midasi/chara_transform.png" alt="" class="" width="100%" height="auto"></span>
+        <span class="boxB-2-B"><p>肉体の構造を変化させ超人的な力を発揮するトランスフォームのサイキック</p></span>
+        <span class="boxB-2-C"><h1>犬童アキ<small>(いんどう あき)</small></h1><hr></span>
+        <span class="boxB-2-D"><p>未知のウィルスに感染した犬に噛まれ、生死を彷徨うが奇跡的に生き延びる。<br>
+        その後、身体が獣化し始め、<br>迫害された彼女は家族と共に世間の目から逃げるような生活を送る。<br>
+        両親が心労で帰らぬ人となり、行く当てもなく途方にくれていたところWEGに拾われる。<br><br>
+        <strong>制約は『獣化』。</strong><br><br>
+        能力向上の制約として、細胞の獣化が進んでいきいつか完全な獣になる。<br>
+        本人は人間よりも動物が好きなので、それでいいと思っている。
+      </p></span>
+      </span>
+      <span class="boxB-2-2">
+        <span class="boxB-2-E">
+        <img src="img/character/standChar_12.png" alt="" class="" width="100%" height="auto">
+        </span>
+      </span>
+      <span class="boxB-2-F"><h1>犬童アキ<small>(いんどう あき)</small></h1></span>
+      <span class="boxB-2-G"><p>未知のウィルスに感染した犬に噛まれ、生死を彷徨うが奇跡的に生き延びる。<br>
+      その後、身体が獣化し始め、迫害された彼女は家族と共に世間の目から逃げるような生活を送る。<br>
+      両親が心労で帰らぬ人となり、行く当てもなく途方にくれていたところWEGに拾われる。<br><br>
+      <strong>制約は『獣化』。</strong><br><br>
+      能力向上の制約として、細胞の獣化が進んでいきいつか完全な獣になる。<br>
+      本人は人間よりも動物が好きなので、それでいいと思っている。
+    </p>
+      </span>
+    </div>
+    <!--13-->
+    <div class="hide">
+      <span class="boxB-2-1">
+        <span class="boxB-2-A"><img src="img/chara_midasi/chara_phonon.png" alt="" class="" width="100%" height="auto"></span>
+        <span class="boxB-2-B"><p>音波や音を自在に操り、空気を媒介に強力な振動波で攻撃するフォノンキネシスのサイキック</p></span>
+        <span class="boxB-2-C"><h1>音羽 鳴海<small>(おとわ なるみ)</small></h1><hr></span>
+        <span class="boxB-2-D"><p>幼い頃から歌が大好きで、将来は歌手になりたいと思っていたどこにでもいる普通の女の子。<br>
+        非常に前向きで、誰に対しても着飾らないオープンな性格。<br>
+        マガツによって生命の危機に瀕した経験から、突如フォノンのサイキックに目覚める。<br>
+        能力向上の代償として耳は聞こえないが、<br>トレードマークのヘッドフォンは付けたままにしている。<br><br>
+        <strong>制約は『聴覚』。</strong><br><br>
+        能力で空間の振動を感知できるので会話の内容を理解することは可能だが、耳自体は聞こえない。
+      </p></span>
+      </span>
+      <span class="boxB-2-2">
+        <span class="boxB-2-E">
+        <img src="img/character/standChar_13.png" alt="" class="" width="100%" height="auto">
+        </span>
+      </span>
+      <span class="boxB-2-F"><h1>音羽 鳴海<small>(おとわ なるみ)</small></h1></span>
+      <span class="boxB-2-G"><p>幼い頃から歌が大好きで、将来は歌手になりたいと思っていたどこにでもいる普通の女の子。<br>
+      非常に前向きで、誰に対しても着飾らないオープンな性格。<br>
+      マガツによって生命の危機に瀕した経験から、突如フォノンのサイキックに目覚める。<br>
+      能力向上の代償として耳は聞こえないが、トレードマークのヘッドフォンは付けたままにしている。<br><br>
+      <strong>制約は『聴覚』。</strong><br><br>
+      能力で空間の振動を感知できるので会話の内容を理解することは可能だが、耳自体は聞こえない。
+    </p>
+      </span>
+    </div>
+    <!--14-->
+    <div class="hide">
+      <span class="boxB-2-1">
+        <span class="boxB-2-A"><img src="img/chara_midasi/chara_gunner.png" alt="" class="" width="100%" height="auto"></span>
+        <span class="boxB-2-B"><p>銃器であればどんなものでも天才的に使いこなすガンナーのサイキック</p></span>
+        <span class="boxB-2-C"><h1>種子島 アスカ<small>(たねがしま あすか)</small></h1><hr></span>
+        <span class="boxB-2-D"><p>突如、海岸線にカテゴリー１のマガツが襲来。<br>
+        偶然、海水浴に来ていた家族を殺され、自身も命の危険に晒されるが、<br>危機一髪のところで自衛軍が助けにやってきたため死を免れる。<br>
+        このときの戦いを目の当たりにしたことでサイキックが発動した。<br>
+        背中に装着したアーム型デバイスを使うことで、大量の重火器を同時に扱うことができる。<br><br>
+        <strong>制約は『両腕の機能』。</strong><br><br>
+        腕はあるが動かすことはできない。
+      </p></span>
+      </span>
+      <span class="boxB-2-2">
+        <span class="boxB-2-E">
+        <img src="img/character/standChar_14.png" alt="" class="" width="100%" height="auto">
+        </span>
+      </span>
+      <span class="boxB-2-F"><h1>種子島 アスカ<small>(たねがしま あすか)</small></h1></span>
+      <span class="boxB-2-G"><p>突如、海岸線にカテゴリー１のマガツが襲来。<br>
+      偶然、海水浴に来ていた家族を殺され、自身も命の危険に晒されるが、<br>危機一髪のところで自衛軍が助けにやってきたため死を免れる。<br>
+      このときの戦いを目の当たりにしたことでサイキックが発動した。<br>
+      背中に装着したアーム型デバイスを使うことで、大量の重火器を同時に扱うことができる。<br><br>
+      <strong>制約は『両腕の機能』。</strong><br><br>
+      腕はあるが動かすことはできない。
+    </p>
+      </span>
+    </div>
+    <!--15-->
+    <div class="hide">
+      <span class="boxB-2-1">
+        <span class="boxB-2-A"><img src="img/chara_midasi/chara_power.png" alt="" class="" width="100%" height="auto"></span>
+        <span class="boxB-2-B"><p>超人的な身体能力をもって敵を次々となぎ倒すパワーのサイキック</p></span>
+        <span class="boxB-2-C"><h1>金剛寺 さくら<small>(こんごうじ さくら)</small></h1><hr></span>
+        <span class="boxB-2-D"><p>
+        勉強は嫌いだが、運動は得意なスポーツ女子。<br>
+        マガツから友を守りたい一心でパワーのサイキックに目覚めた。<br>
+        その当時は肉体が能力に耐えきれなかったため、全身を骨折する重傷を負う。<br>
+        超人的な身体能力に耐えるために皮膚や筋肉、<br>靱帯などを一瞬で金属化させる強化外骨格装置を身にまとう。<br><br>
+        <strong>制約は『肉体』。</strong><br><br>
+        強化外骨格で金属化した部分は徐々に金属化して戻らなくなる。
+      </p></span>
+      </span>
+      <span class="boxB-2-2">
+        <span class="boxB-2-E">
+        <img src="img/character/standChar_15.png" alt="" class="" width="100%" height="auto">
+        </span>
+      </span>
+      <span class="boxB-2-F"><h1>金剛寺 さくら<small>(こんごうじ さくら)</small></h1></span>
+      <span class="boxB-2-G"><p>
+        勉強は嫌いだが、運動は得意なスポーツ女子。<br>
+        マガツから友を守りたい一心でパワーのサイキックに目覚めた。<br>
+        その当時は肉体が能力に耐えきれなかったため、全身を骨折する重傷を負う。<br>
+        超人的な身体能力に耐えるために皮膚や筋肉、靱帯などを一瞬で金属化させる強化外骨格装置を身にまとう。<br><br>
+        <strong>制約は『肉体』。</strong><br><br>
+        強化外骨格で金属化した部分は徐々に金属化して戻らなくなる。
+    </p>
+      </span>
+    </div>
+    <!--16-->
+    <div class="hide">
+      <span class="boxB-2-1">
+        <span class="boxB-2-A"><img src="img/chara_midasi/chara_esp.png" alt="" class="" width="100%" height="auto"></span>
+        <span class="boxB-2-B"><p>人並みはずれた第六感である超感覚的知覚ESPのサイキック<br>
+          微細な変化を感じ取り危険を素早く察知することができる</p></span>
+        <span class="boxB-2-C"><h1>ソフィア・フランチェスカ</h1><hr></span>
+        <span class="boxB-2-D"><p>
+        おっちょこちょいな性格のドジッ娘。<br>
+        三度の飯よりスイーツ大好き。<br>
+        将来はパティシエになりたいごく普通の女の子だった。<br>
+        鋭敏な味覚を持っていたが能力向上のために味覚を失ったため、<br>
+        パティシエになって親のケーキ屋を継ぐ夢はあきらめた。<br><br>
+
+        <strong>制約は『味覚』。</strong><br><br>
+        何を食べても「匂いつき消しゴム」を食べてる感じになる。
+      </p></span>
+      </span>
+      <span class="boxB-2-2">
+        <span class="boxB-2-E">
+        <img src="img/character/standChar_16.png" alt="" class="" width="100%" height="auto">
+        </span>
+      </span>
+      <span class="boxB-2-F"><h1>ソフィア・フランチェスカ</h1></span>
+      <span class="boxB-2-G"><p>
+        おっちょこちょいな性格のドジッ娘。<br>
+        三度の飯よりスイーツ大好き。<br>
+        将来はパティシエになりたいごく普通の女の子だった。<br>
+        鋭敏な味覚を持っていたが能力向上のために味覚を失ったため、<br>
+        パティシエになって親のケーキ屋を継ぐ夢はあきらめた。<br<br>>
+
+        <strong>制約は『味覚』。</strong><br><br>
+        何を食べても「匂いつき消しゴム」を食べてる感じになる。
+    </p>
+      </span>
+    </div>
+    <!--17-->
+    <div class="hide">
+      <span class="boxB-2-1">
+        <span class="boxB-2-A"><img src="img/chara_midasi/chara_regen.png" alt="" class="" width="100%" height="auto"></span>
+        <span class="boxB-2-B"><p>どんな傷も一瞬で回復してしまう不死細胞をもつリジェネのサイキック</p></span>
+        <span class="boxB-2-C"><h1>恬恬<small>(テンテン)</small></h1><hr></span>
+        <span class="boxB-2-D"><p>
+        読書が好きな、物静かで真面目な性格の女の子。<br>
+        下校中に大型トラックに跳ねられ、身体がバラバラになるほどの重傷を負い、<br>
+        死にかけているときサイキック能力が発動。<br>
+        再生の力を身につけた彼女は、マガツとの戦いでは常に最前線に出て囮役を務める。<br><br>
+        <strong>制約は『識字能力』。</strong><br><br>
+        文字を読んで理解することができなくなったため、それ以来、一冊も本を読んでいない。
+      </p></span>
+      </span>
+      <span class="boxB-2-2">
+        <span class="boxB-2-E">
+        <img src="img/character/standChar_17.png" alt="" class="" width="100%" height="auto">
+        </span>
+      </span>
+      <span class="boxB-2-F"><h1>恬恬<small>(テンテン)</small></h1></span>
+      <span class="boxB-2-G"><p>
+        読書が好きな、物静かで真面目な性格の女の子。<br>
+        下校中に大型トラックに跳ねられ、身体がバラバラになるほどの重傷を負い、<br>
+        死にかけているときサイキック能力が発動。<br>
+        再生の力を身につけた彼女は、マガツとの戦いでは常に最前線に出て囮役を務める。<br><br>
+        <strong>制約は『識字能力』。</strong><br><br>
+        文字を読んで理解することができなくなったため、それ以来、一冊も本を読んでいない。
+    </p>
+      </span>
+    </div>
+    <!--18-->
+    <div class="hide">
+      <span class="boxB-2-1">
+        <span class="boxB-2-A"><img src="img/chara_midasi/chara_freezer.png" alt="" class="" width="100%" height="auto"></span>
+        <span class="boxB-2-B"><p>非情なる冷たい氷の力で相手を粉々に粉砕するクリオキネシスのサイキック</p></span>
+        <span class="boxB-2-C"><h1>オリガ・プリセツカヤ</h1><hr></span>
+        <span class="boxB-2-D"><p>
+        両親と妹、家族4人で万年雪に覆われた寒村で慎ましやかに暮らしていた。<br>
+        彼女が13歳の誕生日の日、村がマガツに襲撃される。<br>
+        次々と村人が殺される中、妹と2人で命からがら逃げ出す。<br>
+        逃げた先の森の中、子ども2人ではどうすることもできずに妹が凍死、<br>
+        自身も寒さで死にかけようとしているとき能力に目覚める。<br><br>
+        <strong>制約は『温度感覚』。</strong><br><br>
+        彼女の肌は温もりを感じることができないため、常に凍えるような寒さを感じている。
+      </p></span>
+      </span>
+      <span class="boxB-2-2">
+        <span class="boxB-2-E">
+        <img src="img/character/standChar_18.png" alt="" class="" width="100%" height="auto">
+        </span>
+      </span>
+      <span class="boxB-2-F"><h1>オリガ・プリセツカヤ</h1></span>
+      <span class="boxB-2-G"><p>
+        両親と妹、家族4人で万年雪に覆われた寒村で慎ましやかに暮らしていた。<br>
+        彼女が13歳の誕生日の日、村がマガツに襲撃される。<br>
+        次々と村人が殺される中、妹と2人で命からがら逃げ出す。<br>
+        逃げた先の森の中、子ども2人ではどうすることもできずに妹が凍死、<br>
+        自身も寒さで死にかけようとしているとき能力に目覚める。<br><br>
+        <strong>制約は『温度感覚』。</strong><br><br>
+        彼女の肌は温もりを感じることができないため、常に凍えるような寒さを感じている。
+    </p>
+      </span>
+    </div>
+    <!--19-->
+    <div class="hide">
+      <span class="boxB-2-1">
+        <span class="boxB-2-A"><img src="img/chara_midasi/chara_bomber.png" alt="" class="" width="100%" height="auto"></span>
+        <span class="boxB-2-B"><p>手で触れた物を爆発物に変えることで圧倒的な破壊をもたらすボマーのサイキック</p></span>
+        <span class="boxB-2-C"><h1>ロニア・マルカ</h1><hr></span>
+        <span class="boxB-2-D"><p>
+        大型ショッピングセンターで起こった爆弾テロで家族を失う。<br>
+        一命を取り留めた彼女は病床で、<br>
+        爆破原因は彼女のサイキック能力の暴発と知らされる。<br>
+        それ以来、能力の弊害を防ぐ術を求めWEGに入隊する。<br>
+        そして、彼女は償いのためマガツとの闘いに身を投じる。<br><br>
+        <strong>制約は『強迫観念』。</strong><br><br>
+        数々の強迫観念に囚われている。<br>
+        極度の潔癖症であったり、後先を考えずに部屋の整理整頓を始めてしまうなど。
+      </p></span>
+      </span>
+      <span class="boxB-2-2">
+        <span class="boxB-2-E">
+        <img src="img/character/standChar_19.png" alt="" class="" width="100%" height="auto">
+        </span>
+      </span>
+      <span class="boxB-2-F"><h1>ロニア・マルカ</h1></span>
+      <span class="boxB-2-G"><p>
+        大型ショッピングセンターで起こった爆弾テロで家族を失う。<br>
+        一命を取り留めた彼女は病床で、<br>
+        爆破原因は彼女のサイキック能力の暴発と知らされる。<br>
+        それ以来、能力の弊害を防ぐ術を求めWEGに入隊する。<br>
+        そして、彼女は償いのためマガツとの闘いに身を投じる。<br><br>
+        <strong>制約は『強迫観念』。</strong><br><br>
+        数々の強迫観念に囚われている。<br>
+        極度の潔癖症であったり、後先を考えずに部屋の整理整頓を始めてしまうなど。
+    </p>
+      </span>
+    </div>
+    <!--20-->
+    <div class="hide">
+      <span class="boxB-2-1">
+        <span class="boxB-2-A"><img src="img/chara_midasi/chara_acid.png" alt="" class="" width="100%" height="auto"></span>
+        <span class="boxB-2-B"><p>有機物であれば触ったものを瞬時に腐らせてしまうアシッドのサイキック</p></span>
+        <span class="boxB-2-C"><h1>黒古もえぎ<small>(くろこ もえぎ)</small></h1><hr></span>
+        <span class="boxB-2-D"><p>
+        物心がついた頃にはすでにサイキック能力が発現していたため、<br>
+        人との触れあい、温もりを知らないまま育ってきた。<br>
+        彼女はずっとサイキック能力が消えることを望んでいたが、<br>
+        WEGに入隊し力をコントロールできるようになるにつれ、<br>自らの運命を受け入れるようになる。<br><br>
+        <strong>制約は『痛み』。</strong><br><br>
+        常に身体の一部に焼け付くような痛みがある。
+      </p></span>
+      </span>
+      <span class="boxB-2-2">
+        <span class="boxB-2-E">
+        <img src="img/character/standChar_20.png" alt="" class="" width="100%" height="auto">
+        </span>
+      </span>
+      <span class="boxB-2-F"><h1>黒古もえぎ<small>(くろこ もえぎ)</small></h1></span>
+      <span class="boxB-2-G"><p>
+        物心がついた頃にはすでにサイキック能力が発現していたため、<br>
+        人との触れあい、温もりを知らないまま育ってきた。<br>
+        彼女はずっとサイキック能力が消えることを望んでいたが、<br>
+        WEGに入隊し力をコントロールできるようになるにつれ、自らの運命を受け入れるようになる。<br><br>
+        <strong>制約は『痛み』。</strong><br><br>
+        常に身体の一部に焼け付くような痛みがある。
+    </p>
+      </span>
+    </div>
+    <!--21-->
+    <div class="hide">
+      <span class="boxB-2-1">
+        <span class="boxB-2-A"><img src="img/chara_midasi/chara_psychokinesis.png" alt="" class="" width="100%" height="auto"></span>
+        <span class="boxB-2-B"><p>意思の力だけで物体を動かす力、サイコキネシスのサイキック</p></span>
+        <span class="boxB-2-C"><h1>シャーロット・ローラン</h1><hr></span>
+        <span class="boxB-2-D"><p>
+          <!--テキスト入力-->
+          フランス貴族の一人娘。幼少の頃から神童と呼ばれていた天才児。<br>
+          実はフランス人である両親の娘でなく<br>WEGがDNA操作で人工的に生み出した人工サイキッカーである。<br>
+          その事実を知ったとき彼女の両足はその機能を停止し、<br>同時に眠っていたサイキック能力に目覚める。<br><br>
+          <strong>制約は『両足の機能』。</strong><br><br>
+          歩くことが出来ない彼女は、念動力でイスを動かし生活をしている。
+        </p></span>
+      </span>
+      <span class="boxB-2-2">
+        <span class="boxB-2-E">
+        <img src="img/character/standChar_21.png" alt="" class="" width="100%" height="auto">
+        </span>
+      </span>
+      <span class="boxB-2-F"><h1>シャーロット・ローラン</h1></span>
+      <span class="boxB-2-G"><p>
+        <!--テキスト入力-->
+        フランス貴族の一人娘。幼少の頃から神童と呼ばれていた天才児。<br>
+        実はフランス人である両親の娘でなくWEGがDNA操作で人工的に生み出した人工サイキッカーである。<br>
+        その事実を知ったとき彼女の両足はその機能を停止し、同時に眠っていたサイキック能力に目覚める。<br><br>
+        <strong>制約は『両足の機能』。</strong><br><br>
+        歩くことが出来ない彼女は、念動力でイスを動かし生活をしている。
+      </p>
+      </span>
+    </div>
+    <!--22-->
+    <div class="hide">
+      <span class="boxB-2-1">
+        <span class="boxB-2-A"><img src="img/chara_midasi/chara_shadow.png" alt="" class="" width="100%" height="auto"></span>
+        <span class="boxB-2-B"><p>影から影へと忍び歩き、敵の油断を突いて仕留めるシャドウキネシスのサイキック</p></span>
+        <span class="boxB-2-C"><h1>廣見千影<small>(ひろみ ちかげ)</small></h1><hr></span>
+        <span class="boxB-2-D"><p>
+          <!--テキスト入力-->
+          公園で遊んでいた幼い彼女は女友達とともに幼児性愛者の男に誘拐されてしまう。<br>
+          スキを見て逃げ出した彼女は物影に息を殺して隠れていたが、友人は男に殺されてまう。<br>
+          恐怖が頂点に達した彼女は、サイキック能力は目覚める。<br>変態男は彼女の影の最初の犠牲者となった。<br><br>
+          <strong>制約は『触覚』。</strong><br><br>
+          彼女は何に触れても､何に触れられてもそれの感触や温もりを感じ取ることはできない。
+        </p></span>
+      </span>
+      <span class="boxB-2-2">
+        <span class="boxB-2-E">
+        <img src="img/character/standChar_22.png" alt="" class="" width="100%" height="auto">
+        </span>
+      </span>
+      <span class="boxB-2-F"><h1>廣見千影<small>(ひろみ ちかげ)</small></h1></span>
+      <span class="boxB-2-G"><p>
+        <!--テキスト入力-->
+        公園で遊んでいた幼い彼女は女友達とともに幼児性愛者の男に誘拐されてしまう。<br>
+        スキを見て逃げ出した彼女は物影に息を殺して隠れていたが、友人は男に殺されてまう。<br>
+        恐怖が頂点に達した彼女は、サイキック能力は目覚める。変態男は彼女の影の最初の犠牲者となった。<br><br>
+        <strong>制約は『触覚』。</strong><br><br>
+        彼女は何に触れても､何に触れられてもそれの感触や温もりを感じ取ることはできない。
+      </p>
+      </span>
+    </div>
+    <!--23-->
+    <div class="hide">
+      <span class="boxB-2-1">
+        <span class="boxB-2-A"><img src="img/chara_midasi/chara_vault.png" alt="" class="" width="100%" height="auto"></span>
+        <span class="boxB-2-B"><p>圧倒的なエネルギーである雷を操るヴォルトキネシスのサイキック</p></span>
+        <span class="boxB-2-C"><h1>フレイヤ・ドナー</h1><hr></span>
+        <span class="boxB-2-D"><p>
+          <!--テキスト入力-->
+          ドイツの空軍将校の一人娘。<br>
+          幼少期よりサイキック能力に目覚めていたが、両親の判断で隠蔽され育ってきた。<br>
+          マガツとの大規模戦闘で父親が死亡したため、WEGに入隊する。<br>
+          彼女の目的は父親の復讐である。<br><br>
+          <strong>制約は『足首の欠損』。</strong><br><br>
+          彼女はバレリーナになることが夢だったが、復讐のためにあっさりと大切な部位を生け贄に捧げた。
+        </p></span>
+      </span>
+      <span class="boxB-2-2">
+        <span class="boxB-2-E">
+        <img src="img/character/standChar_23.png" alt="" class="" width="100%" height="auto">
+        </span>
+      </span>
+      <span class="boxB-2-F"><h1>フレイヤ・ドナー</h1></span>
+      <span class="boxB-2-G"><p>
+        <!--テキスト入力-->
+        ドイツの空軍将校の一人娘。<br>
+        幼少期よりサイキック能力に目覚めていたが、両親の判断で隠蔽され育ってきた。<br>
+        マガツとの大規模戦闘で父親が死亡したため、WEGに入隊する。<br>
+        彼女の目的は父親の復讐である。<br><br>
+        <strong>制約は『足首の欠損』。</strong><br><br>
+        彼女はバレリーナになることが夢だったが、復讐のためにあっさりと大切な部位を生け贄に捧げた。
+      </p>
+      </span>
+    </div>
+    <!--24-->
+    <div class="hide">
+      <span class="boxB-2-1">
+        <span class="boxB-2-A"><img src="img/chara_midasi/chara_magnetic.png" alt="" class="" width="100%" height="auto"></span>
+        <span class="boxB-2-B"><p>磁場を操ったり、磁気エネルギー・パルスを生成するマグネティックのサイキック</p></span>
+        <span class="boxB-2-C"><h1>黒鉄六ツ木<small>(くろがね むつぎ)</small></h1><hr></span>
+        <span class="boxB-2-D"><p>
+          <!--テキスト入力-->
+          幼い頃に両親を事故で亡くした彼女は、弟2人と3人家族で暮らしていた。<br>
+          自分の留守中に弟たちがマガツに殺されたことによる自責の念から<br>
+          自ら死を選択しビルから飛び降りる。<br>
+          しかし、飛び降りている最中にサイキックが発動したため死を免れる。<br>
+          戦いに身を投じたのは家族を守れなかった自分自身への戒めと、マガツへの復讐のため。<br><br>
+          <strong>制約は『両前腕の欠損』。</strong><br><br>
+          金属の義手を付けている。<br>
+          本来動かせるタイプのものではないが磁気を操る能力を利用しコントロールしている。
+        </p></span>
+      </span>
+      <span class="boxB-2-2">
+        <span class="boxB-2-E">
+        <img src="img/character/standChar_24.png" alt="" class="" width="100%" height="auto">
+        </span>
+      </span>
+      <span class="boxB-2-F"><h1>黒鉄六ツ木<small>(くろがね むつぎ)</small></h1></span>
+      <span class="boxB-2-G"><p>
+        <!--テキスト入力-->
+        幼い頃に両親を事故で亡くした彼女は、弟2人と3人家族で暮らしていた。<br>
+        自分の留守中に弟たちがマガツに殺されたことによる自責の念から<br>
+        自ら死を選択しビルから飛び降りる。<br>
+        しかし、飛び降りている最中にサイキックが発動したため死を免れる。<br>
+        戦いに身を投じたのは家族を守れなかった自分自身への戒めと、マガツへの復讐のため。<br><br>
+        <strong>制約は『両前腕の欠損』。</strong><br><br>
+        金属の義手を付けている。<br>
+        本来動かせるタイプのものではないが磁気を操る能力を利用しコントロールしている。
+      </p>
+      </span>
+    </div>
+    <!--25-->
+    <div class="hide">
+      <span class="boxB-2-1">
+        <span class="boxB-2-A"><img src="img/chara_midasi/chara_rack.png" alt="" class="" width="100%" height="auto"></span>
+        <span class="boxB-2-B"><p>何をやっても「幸運」で効果的なダメージを与えるラックのサイキック</p></span>
+        <span class="boxB-2-C"><h1>ラキ・アイオナ</h1><hr></span>
+        <span class="boxB-2-D"><p>
+          <!--テキスト入力-->
+          ダイビングとサーフィンが大好きなハワイ出身のお気楽女子高生<br>
+          彼女は昔からツキに恵まれていた。<br>
+          ある日、寝坊が原因で乗り損ねたスクールバスがマガツに襲われ<br>クラス全員が死亡し自分だけが助かった。<br>
+          そのショックで人里離れた土地で暮らすようになるが、程なくしてWEGにスカウトされた。<br><br>
+          <strong>制約は『水アレルギー』。</strong><br><br>
+          水や海に触れるとアレルギー反応を起こす<br>
+          そのため、彼女は大好きな海に二度と入ることができない。
+        </p></span>
+      </span>
+      <span class="boxB-2-2">
+        <span class="boxB-2-E">
+        <img src="img/character/standChar_25.png" alt="" class="" width="100%" height="auto">
+        </span>
+      </span>
+      <span class="boxB-2-F"><h1>ラキ・アイオナ</h1></span>
+      <span class="boxB-2-G"><p>
+        <!--テキスト入力-->
+        ダイビングとサーフィンが大好きなハワイ出身のお気楽女子高生<br>
+        彼女は昔からツキに恵まれていた。<br>
+        ある日、寝坊が原因で乗り損ねたスクールバスがマガツに襲われクラス全員が死亡し自分だけが助かった。<br>
+        そのショックで人里離れた土地で暮らすようになるが、程なくしてWEGにスカウトされた。<br><br>
+        <strong>制約は『水アレルギー』。</strong><br><br>
+        水や海に触れるとアレルギー反応を起こす<br>
+        そのため、彼女は大好きな海に二度と入ることができない。
+      </p>
+      </span>
+    </div>
+    <!--26-->
+    <div class="hide">
+      <span class="boxB-2-1">
+        <span class="boxB-2-A"><img src="img/chara_midasi/chara_apport.png" alt="" class="" width="100%" height="auto"></span>
+        <span class="boxB-2-B"><p>別の場所にある物体を取り寄せたり、物体をどこからともなく登場させるアポートのサイキック</p></span>
+        <span class="boxB-2-C"><h1>扉七瀬<small>(とびら ななせ)</small></h1><hr></span>
+        <span class="boxB-2-D"><p>
+          <!--テキスト入力-->
+          エセ関西弁を話す自称関西人。<br>
+          基本的に怠惰で、面倒だと思った事からは逃げようとするが、<br>心根は熱く本当に困っている人がいれば全力で助けようとする。<br>
+          住んでいた街がマガツに襲われ、家族を失う。<br>
+          その時偶然、重機の下敷きになって死んだマガツを目撃する。<br>
+          その映像が強烈な記憶となったため、アポートのサイキックが目覚めたと本人は思っている。<br><br>
+          <strong>制約は『筋力』。</strong><br><br>
+          文字通り、箸より重い物は持ち上げられない。<br>
+          そのため、アポートの力で食事をしているが、たまに失敗して大量の食事をはき出すので周りからの評判は悪い。
+        </p></span>
+      </span>
+      <span class="boxB-2-2">
+        <span class="boxB-2-E">
+        <img src="img/character/standChar_26.png" alt="" class="" width="100%" height="auto">
+        </span>
+      </span>
+      <span class="boxB-2-F"><h1>扉七瀬<small>(とびら ななせ)</small></h1></span>
+      <span class="boxB-2-G"><p>
+        <!--テキスト入力-->
+        エセ関西弁を話す自称関西人。<br>
+        基本的に怠惰で、面倒だと思った事からは逃げようとするが、心根は熱く本当に困っている人がいれば全力で助けようとする。<br>
+        住んでいた街がマガツに襲われ、家族を失う。<br>
+        その時偶然、重機の下敷きになって死んだマガツを目撃する。<br>
+        その映像が強烈な記憶となったため、アポートのサイキックが目覚めたと本人は思っている。<br><br>
+        <strong>制約は『筋力』。</strong><br><br>
+        文字通り、箸より重い物は持ち上げられない。<br>
+        そのため、アポートの力で食事をしているが、たまに失敗して大量の食事をはき出すので周りからの評判は悪い。
+      </p>
+      </span>
+    </div>
+    <!--27-->
+    <div class="hide">
+      <span class="boxB-2-1">
+        <span class="boxB-2-A"><img src="img/chara_midasi/chara_photon.png" alt="" class="" width="100%" height="auto"></span>
+        <span class="boxB-2-B"><p>光を破壊エネルギーとして放射するフォトンキネシスのサイキック</p></span>
+        <span class="boxB-2-C"><h1>マヌエラ・グラール</h1><hr></span>
+        <span class="boxB-2-D"><p>
+          <!--テキスト入力-->
+          異例の若さで女子修道院長に任命された敬虔な修道女。<br>
+          他人が困っていたり傷ついていたりしたら、迷わず助けるような献身的な性格。<br>
+          礼拝に来ていた子ども達をマガツから守るため身を投げ出す。<br>
+          結果、瀕死の重傷を負うことになったが、それがきっかけでサイキック能力に目覚めた。<br>
+          <br><br>
+          <strong>制約は『視力』。<strong><br><br>
+          彼女の目は光を見ることができなくなったが、彼女自身が光を放つ存在となった。
+        </p></span>
+      </span>
+      <span class="boxB-2-2">
+        <span class="boxB-2-E">
+        <img src="img/character/standChar_27.png" alt="" class="" width="100%" height="auto">
+        </span>
+      </span>
+      <span class="boxB-2-F"><h1>マヌエラ・グラール</h1></span>
+      <span class="boxB-2-G"><p>
+        <!--テキスト入力-->
+        異例の若さで女子修道院長に任命された敬虔な修道女。<br>
+        他人が困っていたり傷ついていたりしたら、迷わず助けるような献身的な性格。<br>
+        礼拝に来ていた子ども達をマガツから守るため身を投げ出す。<br>
+        結果、瀕死の重傷を負うことになったが、それがきっかけでサイキック能力に目覚めた。<br>
+        <br><br>
+        <strong>制約は『視力』。<strong><br><br>
+        彼女の目は光を見ることができなくなったが、彼女自身が光を放つ存在となった。
+      </p>
+      </span>
+    </div>
+    <!--28-->
+    <div class="hide">
+      <span class="boxB-2-1">
+        <span class="boxB-2-A"><img src="img/chara_midasi/chara_virus.png" alt="" class="" width="100%" height="auto"></span>
+        <span class="boxB-2-B"><p>ウィルスや細菌を操り有機体に重大な損傷を与えるウィルスのサイキック</p></span>
+        <span class="boxB-2-C"><h1>宇留主ヤマイ<small>(うるす やまい)</small></h1><hr></span>
+        <span class="boxB-2-D"><p>
+          <!--テキスト入力-->
+          幼い頃から彼女は身体が弱く、いつも健康面に心配ごとを抱えていた。<br>
+          致死性の高いインフルエンザに感染した彼女は死を覚悟するが、<br>
+          サイキックに目覚め一命を取り留めた。<br>
+          ところが、サイキック能力に目覚めても彼女が望む健康な身体は手に入らなかった。<br>
+          死なないというだけで前にも増して身体は不調になり、<br>本人は、正直死んだ方がマシだったと思っている。<br><br>
+          <strong>制約は『健康』。</strong><br><br>
+          常に頭痛、腹痛、倦怠感などに苛まれている。
+        </p></span>
+      </span>
+      <span class="boxB-2-2">
+        <span class="boxB-2-E">
+        <img src="img/character/standChar_28.png" alt="" class="" width="100%" height="auto">
+        </span>
+      </span>
+      <span class="boxB-2-F"><h1>宇留主ヤマイ<small>(うるす やまい)</small></h1></span>
+      <span class="boxB-2-G"><p>
+        <!--テキスト入力-->
+        幼い頃から彼女は身体が弱く、いつも健康面に心配ごとを抱えていた。<br>
+        致死性の高いインフルエンザに感染した彼女は死を覚悟するが、<br>
+        サイキックに目覚め一命を取り留めた。<br>
+        ところが、サイキック能力に目覚めても彼女が望む健康な身体は手に入らなかった。<br>
+        死なないというだけで前にも増して身体は不調になり、本人は、正直死んだ方がマシだったと思っている。<br><br>
+        <strong>制約は『健康』。</strong><br><br>
+        常に頭痛、腹痛、倦怠感などに苛まれている。
+      </p>
+      </span>
+    </div>
+    <!--29-->
+    <div class="hide">
+      <span class="boxB-2-1">
+        <span class="boxB-2-A"><img src="img/chara_midasi/chara_vision.png" alt="" class="" width="100%" height="auto"></span>
+        <span class="boxB-2-B"><p>未来に起こる出来事を感知することで戦況を有利に展開するヴィジョンのサイキック</p></span>
+        <span class="boxB-2-C"><h1>御子神未来<small>(みこがみ みらい)</small></h1><hr></span>
+        <span class="boxB-2-D"><p>
+          <!--テキスト入力-->
+          御子神家は日本有数の財閥である。<br>
+          御子神家の当主は代々、未来予知のような力が備わっており、その力で財をなしてきた。<br>
+          未來はその力が一族の中でもとりわけ強く、数秒先までを完全にビジョンとして見ることが出来る。<br>
+          彼女がまだ子供だった頃、母親がマガツに殺されてしまう。<br>
+          彼女はそのことを予知していたが、力がなかったためそれを止めることが出来なかった。<br>
+          そして、彼女はマガツの戦いに参戦することを決意する。<br><br>
+          <strong>制約は『記憶力』。</strong><br><br>
+          新たに記憶する能力が著しく低下しているため、彼女の周りには膨大な数のメモ帳が散乱している。
+        </p></span>
+      </span>
+      <span class="boxB-2-2">
+        <span class="boxB-2-E">
+        <img src="img/character/standChar_29.png" alt="" class="" width="100%" height="auto">
+        </span>
+      </span>
+      <span class="boxB-2-F"><h1>御子神未来<small>(みこがみ みらい)</small></h1></span>
+      <span class="boxB-2-G"><p>
+        <!--テキスト入力-->
+        御子神家は日本有数の財閥である。<br>
+        御子神家の当主は代々、未来予知のような力が備わっており、その力で財をなしてきた。<br>
+        未來はその力が一族の中でもとりわけ強く、数秒先までを完全にビジョンとして見ることが出来る。<br>
+        彼女がまだ子供だった頃、母親がマガツに殺されてしまう。<br>
+        彼女はそのことを予知していたが、力がなかったためそれを止めることが出来なかった。<br>
+        そして、彼女はマガツの戦いに参戦することを決意する。<br><br>
+        <strong>制約は『記憶力』。</strong><br><br>
+        新たに記憶する能力が著しく低下しているため、彼女の周りには膨大な数のメモ帳が散乱している。
+      </p>
+      </span>
+    </div>
+    <!--30-->
+    <div class="hide">
+      <span class="boxB-2-1">
+        <span class="boxB-2-A"><img src="img/chara_midasi/chara_hyupunoshisu.png" alt="" class="" width="100%" height="auto"></span>
+        <span class="boxB-2-B"><p>対象に幻覚や催眠を起こさせ戦闘能力を奪うヒュプノシスのサイキック</p></span>
+        <span class="boxB-2-C"><h1>夢幻みすず<small>(むげん みすず)</small></h1><hr></span>
+        <span class="boxB-2-D"><p>
+          <!--テキスト入力-->
+          女子高生、いまどき珍しい黒ギャル。毎晩、悪夢にうなされ不眠症になる。<br>
+          専門機関で検査したところ、マガツの脳内イメージを見ているという事実が判明する。<br>
+          これは人類がマガツの意志に初めてコンタクトをとった事例として、研究者を驚かせた。<br>
+          マガツの脳とリンクしたのは彼女のサイキック能力ということも判明し、<br>ＷＥＧに入隊することになった。<br><br>
+          <strong>制約は『睡眠』。</strong><br><br>
+          慢性的に不眠症だが、医学的にはマガツと繋がっているときは睡眠状態になっている。
+        </p></span>
+      </span>
+      <span class="boxB-2-2">
+        <span class="boxB-2-E">
+        <img src="img/character/standChar_30.png" alt="" class="" width="100%" height="auto">
+        </span>
+      </span>
+      <span class="boxB-2-F"><h1>夢幻みすず<small>(むげん みすず)</small></h1></span>
+      <span class="boxB-2-G"><p>
+        <!--テキスト入力-->
+        女子高生、いまどき珍しい黒ギャル。毎晩、悪夢にうなされ不眠症になる。<br>
+        専門機関で検査したところ、マガツの脳内イメージを見ているという事実が判明する。<br>
+        これは人類がマガツの意志に初めてコンタクトをとった事例として、研究者を驚かせた。<br>
+        マガツの脳とリンクしたのは彼女のサイキック能力ということも判明し、ＷＥＧに入隊することになった。<br><br>
+        <strong>制約は『睡眠』。</strong><br><br>
+        慢性的に不眠症だが、医学的にはマガツと繋がっているときは睡眠状態になっている。
+      </p>
+      </span>
+    </div>
+    <!--31-->
+    <div class="hide">
+      <span class="boxB-2-1">
+        <span class="boxB-2-A"><img src="img/chara_midasi/chara_teleport.png" alt="" class="" width="100%" height="auto"></span>
+        <span class="boxB-2-B"><p>目に見える範囲であれば任意に瞬間移動することができるテレポートのサイキック</p></span>
+        <span class="boxB-2-C"><h1>霞寧々<small>(かすみ ねね)</small></h1><hr></span>
+        <span class="boxB-2-D"><p>
+          代々、御守家を守ることを使命とするシノビの一族。<br>
+          元は御守家の分家であった。<br>
+          物心ついた頃から御守家への忠誠心を植えつけられており、<br>その使命に疑問を持つことはなく、<br>
+          彼女のすべては当主である御守鎮子を守ることのみに捧げられている。<br><br>
+          <strong>制約は『自主性』。</strong><br><br>
+          命令の遂行に対して合理的に判断することは出来るが、<br>
+          命令以外のことを自ら考えて実行することが出来ない。
+      </p></span>
+      </span>
+      <span class="boxB-2-2">
+        <span class="boxB-2-E">
+        <img src="img/character/standChar_31.png" alt="" class="" width="100%" height="auto">
+        </span>
+      </span>
+      <span class="boxB-2-F"><h1>霞寧々<small>(かすみ ねね)</small></h1></span>
+      <span class="boxB-2-G"><p>
+        代々、御守家を守ることを使命とするシノビの一族。<br>
+        元は御守家の分家であった。<br>
+        物心ついた頃から御守家への忠誠心を植えつけられており、その使命に疑問を持つことはなく、<br>
+        彼女のすべては当主である御守鎮子を守ることのみに捧げられている。<br><br>
+        <strong>制約は『自主性』。</strong><br><br>
+        命令の遂行に対して合理的に判断することは出来るが、<br>
+        命令以外のことを自ら考えて実行することが出来ない。
+    </p>
+      </span>
+    </div>
+    <!--32-->
+    <div class="hide">
+      <span class="boxB-2-1">
+        <span class="boxB-2-A"><img src="img/chara_midasi/chara_gravity.png" alt="" class="" width="100%" height="auto"></span>
+        <span class="boxB-2-B"><p>重力を操り対象の動きを止め甚大なダメージを与えるグラビティのサイキック</p></span>
+        <span class="boxB-2-C"><h1>御守鎮子<small>(おもり しずこ)</small></h1><hr></span>
+        <span class="boxB-2-D"><p>
+          御守家は代々続く最古に近い神主の家系であり、鎮子は御守神宮の124代目跡取り。<br>
+          日本の歴史を代々見守ってきた御守家の使命はマガツから人類を守ることであり、<br>
+          一族に伝わる『竹内文書』によってマガツの襲来を予期していた。<br><br>
+          <strong>制約は『四肢欠損』。</strong><br><br>
+          鎮子は御守家によって予め用意されたサイキック能力者である。<br>
+          能力が発現すると、強化のためすぐに四肢を生体人工義手、義足に変えられた。<br>
+          これは有機体の細胞を培養して作られたもので、見た目や機能などは本来の肉体に近いものだが、<br>
+          強い拒絶反応と痛みに耐えなければならない。
+      </p></span>
+      </span>
+      <span class="boxB-2-2">
+        <span class="boxB-2-E">
+        <img src="img/character/standChar_32.png" alt="" class="" width="100%" height="auto">
+        </span>
+      </span>
+      <span class="boxB-2-F"><h1>御守鎮子<small>(おもり しずこ)</small></h1></span>
+      <span class="boxB-2-G"><p>
+        御守家は代々続く最古に近い神主の家系であり、鎮子は御守神宮の124代目跡取り。<br>
+        日本の歴史を代々見守ってきた御守家の使命はマガツから人類を守ることであり、<br>
+        一族に伝わる『竹内文書』によってマガツの襲来を予期していた。<br><br>
+        <strong>制約は『四肢欠損』。</strong><br><br>
+        鎮子は御守家によって予め用意されたサイキック能力者である。<br>
+        能力が発現すると、強化のためすぐに四肢を生体人工義手、義足に変えられた。<br>
+        これは有機体の細胞を培養して作られたもので、見た目や機能などは本来の肉体に近いものだが、<br>
+        強い拒絶反応と痛みに耐えなければならない。
+    </p>
+      </span>
+    </div>
+    <!--33-->
+    <div class="hide">
+      <span class="boxB-2-1">
+        <span class="boxB-2-A"><img src="img/chara_midasi/chara_time.png" alt="" class="" width="100%" height="auto"></span>
+        <span class="boxB-2-B"><p>自分の時間が超加速する事で周囲の全てが停止しているように見えるタイムのサイキック</p></span>
+        <span class="boxB-2-C"><h1>守時美玲<small>もりとき みれい)</small></h1><hr></span>
+        <span class="boxB-2-D"><p>
+          タイムのサイキックは一見、「時間を止めている」ように見えるが、<br>実は「通常の数万倍の速さで動き回る」というもの。<br>
+          通常の人間であれば瞬く間に歳をとってしまうが、<br>彼女はマガツと融合した人類であり寿命はほぼ無限に近い。<br>
+          古代より人類とマガツはたびたびコンタクトしており、<br>人類にサイキック能力を授けたのもマガツである。<br><br>
+          <strong>制約は『死』。</strong><br><br>
+          細胞が分子レベルで分解されない限り再生してしまうため、死ぬことが出来ない。
+      </p></span>
+      </span>
+      <span class="boxB-2-2">
+        <span class="boxB-2-E">
+        <img src="img/character/standChar_33.png" alt="" class="" width="100%" height="auto">
+        </span>
+      </span>
+      <span class="boxB-2-F"><h1>守時美玲<small>もりとき みれい)</small></h1></span>
+      <span class="boxB-2-G"><p>
+        タイムのサイキックは一見、「時間を止めている」ように見えるが、実は「通常の数万倍の速さで動き回る」というもの。<br>
+        通常の人間であれば瞬く間に歳をとってしまうが、彼女はマガツと融合した人類であり寿命はほぼ無限に近い。<br>
+        古代より人類とマガツはたびたびコンタクトしており、人類にサイキック能力を授けたのもマガツである。<br><br>
+        <strong>制約は『死』。</strong><br><br>
+        細胞が分子レベルで分解されない限り再生してしまうため、死ぬことが出来ない。
+    </p>
+      </span>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<div class="download-button">
+  <!--
+  <div class="ap"><a class="apple" target="_blank" href="javascript:void(0)">
+    <img src="img/apple.png" alt="" class="apimg" width="" height=""></a></div>
+  <div class="go"><a class="google" target="_blank" href="javascript:void(0)">
+  <img src="img/google.png" alt="" class="goimg" width="" height=""></a></div>
+-->
+</div>
+
+<!--
+<div class="mv2">
+  <iframe
+  src="https://www.youtube.com/embed/xvHPAVapnuY?rel=0&iv_load_policy=3&showinfo=0&controls=0&modestbranding=1"
+  frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+-->
+
+<div class="contmoji">
+  <span><img src="img/news2.png" alt="" class="C"></span>
+</div>
+
+
+<div class="HQ">
+  <div class="Os">
+    <div class="Os2">
+
+      <p class="no1"><a href="#">お知らせ１</a></p>
+      <hr>
+      <p class="no1"><a href="#">お知らせ２</a></p>
+      <hr>
+      <p class="no1"><a href="#">お知らせ３</a></p>
+      <hr>
+      <p class="no1"><a href="#">お知らせ４</a></p>
+      <hr>
+
+      <p class="no1 no2"><a href="news.html">more ▶▶▶</a></p>
+
+
+    </div>
+  </div>
+
+  <div class="contmoji2">
+    <span><img src="img/twitter.png" alt="" class="C"></span>
+  </div>
+
+  <div class="Tw">
+    <div class="Tw2">
+      <a class="twitter-timeline" href="https://twitter.com/RoktGames?ref_src=twsrc%5Etfw">
+      Tweets by RoktGames</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+</div><!--widthのdiv-->
+</div><!--contentのdiv-->
+
+
+</div><!--wrapperのdiv-->
+<div class="footer">
+  <div class="link">
+    <p>
+    <a href="#">利用規約</a>
+    <span>　/　</span>
+    <a href="#">プライバシーポリシー</a>
+    <span>　/　</span>
+    <a href="#">資金決済法に基づく表示</a>
+    <span>　/　</span>
+    <a href="#">特定商取引法に基づく表示</a>
+  </p>
+  </div>
+  <div class="copyright">
+  <p>© 2018 world End Girls  All Rights Reserved.</p>
+  </div>
+</div>
+</body>
+</html>
