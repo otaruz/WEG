@@ -207,7 +207,8 @@ padding: 5%;
 box-sizing:border-box;
 margin-bottom: 40px;
 }
-.Tw2{height: 300px;margin: 0 auto; text-align: center;}
+.Tw2{height: 300px; margin: 0 auto; text-align: center;}
+.twitter-timeline{height: 300px;}
 
 /*アニメーション背景*/
 .content{opacity:0;}

@@ -64,7 +64,7 @@ img{
      -webkit-box-sizing:border-box;
      box-sizing:border-box;}
    .hide {display:none;}
-   .boxB-2-1{width: 55%; height: auto;float: left;  white-space: nowrap; z-index: 2;}
+   .boxB-2-1{width: 55%; height: auto; float: left;  white-space: nowrap; z-index: 2;}
 
 .boxB-2-2{
   width: 45%;height: 100%; float: left; z-index: 1;}
